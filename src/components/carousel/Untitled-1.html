@@ -1,0 +1,33 @@
+<motion.div
+				initial={{ x: 0 }}
+				animate={{ x: currentIndex === 0 ? 0 : -100 }}
+				transition={{ duration: 0.5 }}
+			>
+				<motion.div
+					initial={{ x: currentIndex === 0 ? 0 : 100 }}
+					animate={{ x: 0 }}
+					transition={{ duration: 0.5 }}
+				>
+				
+				</motion.div>
+				<div>
+					<h2>{items[currentIndex].text}</h2>
+				</div>
+			</motion.div>
+			<div className="flex flex-row gap-4">
+				<Button onClick={handlePrev}>Previous</Button>
+				<Button onClick={handleNext}>Next</Button>
+			</div>
+
+			const items = [
+		{
+			image: "/building.jpg",
+			header: "Hotel",
+			text: "Rent cozy rooms for your stay. We offer affordable accommodation with well-appointed rooms for short or long-term rentals. Book your comfortable room now!",
+		},
+		{
+			image: "/renting.jpg",
+			header: "Renting",
+			text: "Book your room today and discover why our guests choose us for their accommodation needs. Experience the best in comfort, convenience, and hospitality at our hotel.",
+		},
+	];
